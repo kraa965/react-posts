@@ -13,7 +13,7 @@ const fetchPosts = async ({ pageParam = 1 }) => {
 };
 
 const HomePage: React.FC = () => {
-  const [page, setPage] = useState(1);
+  const [_page, setPage] = useState(1);
   const { data, fetchNextPage, hasNextPage, isFetchingNextPage } =
     useInfiniteQuery("posts", fetchPosts, {
       getNextPageParam: (lastPage, allPages) => {
